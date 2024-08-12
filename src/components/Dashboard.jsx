@@ -20,7 +20,7 @@ const Dashboard = () => {
     }, [bannerData]);
 
     const updateBanner = () => {
-        axios.post('http://localhost:5000/api/banner', {
+        axios.post('https://tuf-backend-five.vercel.app/api/banner', {
             title,
             description,
             timer,
@@ -38,7 +38,7 @@ const Dashboard = () => {
 
 
     const toggleVisibility = () => {
-        axios.post('http://localhost:5000/api/banner/toggle-visibility')
+        axios.post('https://tuf-backend-five.vercel.app/api/banner/toggle-visibility')
             .then(res => {
                 setBannerData(prev => ({
                     ...prev,

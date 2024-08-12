@@ -9,7 +9,7 @@ export const BannerProvider = ({ children }) => {
 
     useEffect(() => {
         const fetchBannerData = () => {
-            axios.get('http://localhost:5000/api/banner')
+            axios.get('https://tuf-backend-five.vercel.app/api/banner')
                 .then(res => {
                     setBannerData(res.data);
                     setCountDown(res.data.timer);
