@@ -54,7 +54,7 @@ const Dashboard = () => {
 
     return (
         <div className='dashboard p-20 bg-[#3493ca] flex flex-col'>
-            <h2 className='text-6xl font-bold text-center'>Dashboard</h2>
+            <h2 className='text-3xl md:text-6xl font-bold text-center'>Dashboard</h2>
             <label className='font-medium text-xl'>Title:</label>
             <input className='h-10 rounded-md p-2' type='text' value={title} onChange={(e) => setTitle(e.target.value)} />
             <br />
@@ -70,11 +70,11 @@ const Dashboard = () => {
             <label className='font-medium text-xl'>Is Visible:</label>
             <input className='h-10 rounded-md p-2' type='checkbox' checked={isVisible} onChange={(e) => setIsVisible(e.target.checked)} />
             <br />
-            <button className='text-white w-1/6 border rounded-lg border-1 p-2 bg-black'  onClick={toggleVisibility}>
+            <button className='text-white w-full md:w-1/6 border rounded-lg border-1 p-2 bg-black'  onClick={toggleVisibility}>
                 Toggle Banner Visibility
             </button>
             <br />
-            <button className='text-white w-1/6 border rounded-lg border-1 p-2 bg-black' onClick={updateBanner}>Update Banner</button>
+            <button className='text-white w-full md:w-1/6 border rounded-lg border-1 p-2 bg-black' onClick={updateBanner}>Update Banner</button>
         </div>
     )
 }
